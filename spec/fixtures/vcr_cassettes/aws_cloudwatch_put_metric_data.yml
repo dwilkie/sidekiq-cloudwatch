@@ -1,0 +1,49 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://monitoring.us-east-1.amazonaws.com/
+    body:
+      encoding: UTF-8
+      string: Action=PutMetricData&MetricData.member.1.Dimensions.member.1.Name=AutoScalingGroupName&MetricData.member.1.Dimensions.member.1.Value=AutoScalingGroupName&MetricData.member.1.MetricName=MetricName&MetricData.member.1.Timestamp=2015-07-11T10%3A43%3A29Z&MetricData.member.1.Unit=None&MetricData.member.1.Value=0.0&Namespace=Namespace&Version=2010-08-01
+    headers:
+      Content-Type:
+      - application/x-www-form-urlencoded; charset=utf-8
+      Accept-Encoding:
+      - ''
+      User-Agent:
+      - aws-sdk-ruby2/2.1.4 ruby/2.2.2 x86_64-linux
+      X-Amz-Date:
+      - 20150711T104329Z
+      Host:
+      - monitoring.ap-southeast-1.amazonaws.com
+      X-Amz-Content-Sha256:
+      - sha
+      Content-Length:
+      - '349'
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Amzn-Requestid:
+      - abc251a7-13b8-99e5-7654-7a64577f4317
+      Content-Type:
+      - text/xml
+      Content-Length:
+      - '212'
+      Date:
+      - Sat, 11 Jul 2015 10:43:30 GMT
+    body:
+      encoding: UTF-8
+      string: |
+        <PutMetricDataResponse xmlns="http://monitoring.amazonaws.com/doc/2010-08-01/">
+          <ResponseMetadata>
+            <RequestId>abc251a7-13b8-99e5-7654-7a64577f4317</RequestId>
+          </ResponseMetadata>
+        </PutMetricDataResponse>
+    http_version:
+  recorded_at: Sat, 11 Jul 2015 10:43:30 GMT
+recorded_with: VCR 2.9.3
