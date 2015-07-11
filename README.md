@@ -15,7 +15,7 @@ Copy `.env` to `.env.production` and fill in `.env.production` with the real con
 ## Testing in Development
 
 ```
-bundle exec foreman run sidekiq-cloudwatch -e .env.production
+bundle exec foreman run -e .env.production rake metrics:update
 ```
 
 Check the AWS console to see your custom metric
