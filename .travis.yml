@@ -1,4 +1,11 @@
 rvm:
-  - 2.2.2
+- 2.2.2
 services:
-  - redis-server
+- redis-server
+deploy:
+  provider: heroku
+  api_key:
+    secure: m6ebyUBaCHGpaImQ+KBWcIa6VC2plAJOPxobLqHwRiJg9g+saPLXV44cWSsansuYa0HQD2xYFZZ3wnrFm9WhyphhMxaN87WPq06bTFMAqTuwaa+TJ9BwxqwSxueewt11EzpaNOD4V3QdM0hXirJ/mfDLqx9j/MpzBXFVAnznhRXZMEymgcc1Wa/9lWCYZd+L4GpdrQgNzU8PpSzMFzk2VoNT4l932YwL5EVxXhoPVz59Xq96NooZoEM3SUNqZhyW2mRkBcm/ZcavMl2CJov8h+ExYfevpQmAA0r3AwY4ZUfV/sk29MuCjTp5k+D5VLSGFny2z0WGm5xVVAW/9SXqtB45MaNSM3kiJ+lJ2Kuf9t3YXxuXUUzxN4S3sUbf1zpJcfYuf0fRX7ip2g/I5cbyew757UxBLY3R0SnUyufS5a0ItmmCSW852LDo6vFE6jymNaKO4rJQ7CSUXfNl7dbwPym3GDvfrEFCjoe8osrbEmJ+AXPiv3lxyH7imiA3OuPpENrt0z4AbeGq2WxKKEC4T+7HPqhR94kbmEFMfjOyIP9RnYn+EW1y+XM6EKo9HCjg0rv8Mbke6DkHV5hdXCq1pwrzEbnmbszBdLk97wGP6fjSqr14Fb/p9h0iDBoNdifs1eydODftoeE7GukrkW4oQKVA5NH+Fst2LAynkTAiEME=
+  app: sidekiq-cloudwatch
+  on:
+    repo: dwilkie/sidekiq-cloudwatch
