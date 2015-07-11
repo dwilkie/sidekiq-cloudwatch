@@ -1,2 +1,4 @@
 rvm:
- - 2.2.2
+  - 2.2.2
+services:
+  - redis-server
