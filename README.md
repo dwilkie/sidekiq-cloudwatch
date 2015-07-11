@@ -1,5 +1,7 @@
 # sidekiq-cloudwatch
 
+[![Build Status](https://travis-ci.org/dwilkie/sidekiq-cloudwatch.svg?branch=master)](https://travis-ci.org/dwilkie/sidekiq-cloudwatch)
+
 AWS CloudWatch metrics for Sidekiq
 
 ## Usage Scenarios
