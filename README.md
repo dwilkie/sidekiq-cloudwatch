@@ -29,10 +29,8 @@ You can monitor your Sidekiq instances on AWS for free using Heroku
 1. Fork the repo
 2. Push your fork to Heroku
 3. Setup your config vars with `heroku config:set`
-4. Use Heroku Scheduler to trigger `rake metrics:update` every 10 minutes
+4. Use Heroku Scheduler to trigger `rake metrics:update` or `rake metrics:schedule_update` every 10 minutes
 5. Have a beer
-
-Need to update more frequently than once every 10 minutes? See [Issue #1](https://github.com/dwilkie/sidekiq-cloudwatch/issues/1)
 
 ## Notes for AWS Elastic Beanstalk
 

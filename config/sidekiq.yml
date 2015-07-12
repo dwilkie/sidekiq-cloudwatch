@@ -1,0 +1,4 @@
+---
+:concurrency: 1
+:queues:
+  - sidekiq_cloudwatch_metric_update_queue
