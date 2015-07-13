@@ -24,7 +24,7 @@ Check the AWS console to see your custom metric
 
 ### Heroku
 
-You can monitor your Sidekiq instances on AWS for free using Heroku
+You can monitor your Sidekiq instances on AWS for free using Heroku Scheduler
 
 1. Fork the repo
 2. Push your fork to Heroku
@@ -32,7 +32,19 @@ You can monitor your Sidekiq instances on AWS for free using Heroku
 4. Use Heroku Scheduler to trigger `rake metrics:update` or `rake metrics:schedule_update` every 10 minutes
 5. Have a beer
 
-## Notes for AWS Elastic Beanstalk
+Notes:
+
+To get finer granularity on Heroku you can run a job every minute with Heroku Scheduler by creating 10 jobs spaced 1 minute apart. `POST` to scheduler using the following command:
+
+```
+curl 'https://scheduler.heroku.com/jobs' --data 'command=rake+metrics%3Aupdate&dyno_size=11&every=10&at=9'
+```
+
+`at` is the minute you want to start the job and takes the values `0` to `9`. You'll also need to post your cookie. To get the full `curl` command I used Chrome Develper Tools and captured a request.
+
+Scheduling and update with `rake metrics:schedule_update` also works but the worker process will sleep on a free Heroku dyno.
+
+## Autoscaling with Elastic Beanstalk
 
 Elastic Beanstalk doesn't let you configure alarms for custom metrics for autoscaling out of the box. However you can manually change the Autoscaling group to add custom Scaling Policies.
 
